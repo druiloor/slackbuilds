@@ -1,4 +1,37 @@
 Some handy links:
 
-https://help.ubuntu.com/community/SmackConfiguration
 https://github.com/promovicz/smack-util/blob/master/README
+
+https://help.ubuntu.com/community/SmackConfiguration
+
+So i guess this is needed:
+
+--------------------------------------------
+/usr/bin/attr -S -s SMACK64 -V '*' /dev/null
+/usr/bin/attr -S -s SMACK64 -V '*' /dev/zero
+--------------------------------------------
+
+This should do the trick:
+
+----------------------------------------------
+cat << EOF > /etc/profile.d/tmpdir.sh
+#!/bin/sh
+
+if [ ! -d $HOME/tmp -a "$HOME" != "/" ]; then
+  rm -rf $HOME/tmp
+  mkdir -p $HOME/tmp
+fi
+
+chown $USER $HOME/tmp
+chmod 2750 $HOME/tmp
+
+export TMPDIR=$HOME/tmp
+export TMP=$TMPDIR
+EOF
+chmod +x /etc/profile.d/tmpdir.sh
+---------------------------------------------
+
+Setting this to '*' probably may avoid some headaches:
+
+/tmp, /usr/tmp, and /var/tmp
+
