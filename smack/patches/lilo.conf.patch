@@ -1,0 +1,15 @@
+--- /etc/lilo.conf.old	2015-04-29 07:27:42.307497197 +0200
++++ /etc/lilo.conf	2015-04-29 07:34:26.513482963 +0200
+@@ -75,3 +75,12 @@
+   read-only
+ # Linux bootable partition config ends
+ 
++# Linux bootable partition config begins
++image = /boot/vmlinuz-generic-smp-3.10.17-smack
++  initrd = /boot/initrd.gz
++  root = /dev/sda1
++  label = 31017smack
++  security=smack
++  read-only
++# Linux bootable partition config ends
++

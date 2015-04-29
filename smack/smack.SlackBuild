@@ -80,6 +80,7 @@ install -D -m 755 ./init/$PRGNAM.rc $PKG/etc/rc.d/rc.$PRGNAM
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a COPYING NEWS $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a $CWD/README* $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a $CWD/patches $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
