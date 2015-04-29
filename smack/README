@@ -1,0 +1,8 @@
+A selection of administration tools for using the smack kernel
+interface.
+
+The Simplified Mandatory Access Control Kernel (SMACK) provides a
+complete Linux kernel based mechanism for protecting processes and
+data from inappropriate manipulation. Smack uses process, file, and
+network labels combined with an easy to understand and manipulate
+way to identify the kind of accesses that should be allowed.
