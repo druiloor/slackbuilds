@@ -1,0 +1,9 @@
+--- /etc/fstab.old	2015-04-29 06:50:48.009575172 +0200
++++ /etc/fstab	2015-04-29 06:51:30.033573692 +0200
+@@ -5,3 +5,6 @@
+ devpts           /dev/pts         devpts      gid=5,mode=620   0   0
+ proc             /proc            proc        defaults         0   0
+ tmpfs            /dev/shm         tmpfs       defaults         0   0
++
++smackfs          /smack           smackfs     defaults         0   0
++#smackfs          /sys/fs/smackfs  smackfs     defaults         0   0
