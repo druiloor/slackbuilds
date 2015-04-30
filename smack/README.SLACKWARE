@@ -4,6 +4,15 @@ https://github.com/promovicz/smack-util/blob/master/README
 
 https://help.ubuntu.com/community/SmackConfiguration
 
+make bzImage
+./arch/x86/boot/bzImage /boot/vmlinuz-generic-smp-3.10.17-smack
+make modules
+make modules_install
+
+cd /boot/
+mkinitrd -c -k 3.10.17-smack -m ext4
+
+
 So i guess this is needed:
 
 --------------------------------------------
