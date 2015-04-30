@@ -9,7 +9,7 @@
 +  initrd = /boot/initrd.gz
 +  root = /dev/sda1
 +  label = 31017smack
-+  append="security = smack"
++  append="security=smack"
 +  read-only
 +# Linux bootable partition config ends
 +
