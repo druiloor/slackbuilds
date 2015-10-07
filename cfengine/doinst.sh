@@ -23,5 +23,3 @@ preserve_perms() {
 }
 
 preserve_perms etc/rc.d/init.d/cfengine3.new
-#config etc/configfile.new
-
