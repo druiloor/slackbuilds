@@ -75,7 +75,8 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
-install -D -m 755 ./init/$PRGNAM.rc $PKG/etc/rc.d/rc.$PRGNAM
+install -D -m 755 ./init/$PRGNAM.rc $PKG/etc/rc.d/rc.$PRGNAM.new
+install -D -m 755 $CWD/config/tmpdir.sh $PKG/etc/profile.d/tmpdir.sh.new
 
 # Create basic dir structure
 mkdir -p $PKG/smack/ $PKG/etc/smack/accesses.d/ $PKG/etc/smack/cipso.d/
