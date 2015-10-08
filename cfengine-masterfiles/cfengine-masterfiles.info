@@ -1,7 +1,7 @@
 PRGNAM="cfengine-masterfiles"
 VERSION="3.7.1"
 HOMEPAGE="http://cfengine.com/product/cfengine-enterprise-free-25/"
-DOWNLOAD="https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.6.6.tar.gz"
+DOWNLOAD="https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.7.1.tar.gz"
 MD5SUM="4fdc17fcb0f89bab960464ad75d4431f"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
