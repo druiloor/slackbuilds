@@ -1,0 +1,7 @@
+Add to: /etc/rc.d/rc.local 
+
+# Set filesystem capabilities
+if [ -x /etc/rc.d/rc.pcaps4suid0 ]; then
+  /etc/rc.d/rc.pcaps4suid0 start
+fi
+
