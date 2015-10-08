@@ -16,7 +16,12 @@ make modules_install
 cd /boot/
 mkinitrd -c -k 3.10.17-smack -m ext4
 
-Setting this to '*' probably may avoid some headaches:
+cd etc
+patch -p0 < /usr/doc/smack-1.1.0/patches/fstab
+patch -p0 < /usr/doc/smack-1.1.0/patches/lilo.conf
+lilo -v
+
+Setting this to '*' probably may avoid some headaches (see doinst.sh):
 
 /tmp, /usr/tmp, and /var/tmp
 
