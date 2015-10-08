@@ -11,7 +11,7 @@
 PRGNAM=glyptodon
 VERSION=${VERSION:-1.2r2}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_SBo}
+TAG=${TAG:-_GH}
 ARCH=noarch
 
 # Set this if you want to receive an email containing the daily scan report?
@@ -27,9 +27,9 @@ set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
+chmod 700 $TMP
 cd $TMP
 
-# Easiest to just hardcode this
 rm -rf Glyptodon_1.2
 tar xvf $CWD/Glyptodon_1-2-r2-tar.gz
 cd Glyptodon_1.2

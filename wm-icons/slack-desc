@@ -10,10 +10,10 @@ wm-icons: Window Manager Icons
 wm-icons:
 wm-icons: Project purposes
 wm-icons:
-wm-icons: Providing an efficient configurable icons distribution.
-wm-icons: Creating a framework for easy configurable icon themes.
-wm-icons: Staying window manager independent, but with fvwm in mind.
-wm-icons: Releasing the distribution under GPL.
+wm-icons: * Providing an efficient configurable icons distribution.
+wm-icons: * Creating a framework for easy configurable icon themes.
+wm-icons: * Staying window manager independent, but with fvwm in mind.
+wm-icons: * Releasing the distribution under GPL.
 wm-icons:
 wm-icons:
 wm-icons:
