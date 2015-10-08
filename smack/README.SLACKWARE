@@ -4,41 +4,17 @@ https://github.com/promovicz/smack-util/blob/master/README
 
 https://help.ubuntu.com/community/SmackConfiguration
 
+Something like:
+
+cd /usr/src/linux
+patch -p0 < /usr/doc/smack-1.1.0/patches/.config.patch 
 make bzImage
-./arch/x86/boot/bzImage /boot/vmlinuz-generic-smp-3.10.17-smack
+cp ./arch/x86/boot/bzImage /boot/vmlinuz-generic-smp-3.10.17-smack
 make modules
 make modules_install
 
 cd /boot/
 mkinitrd -c -k 3.10.17-smack -m ext4
-
-
-So i guess this is needed:
-
---------------------------------------------
-/usr/bin/attr -S -s SMACK64 -V '*' /dev/null
-/usr/bin/attr -S -s SMACK64 -V '*' /dev/zero
---------------------------------------------
-
-This should do the trick:
-
-----------------------------------------------
-cat << EOF > /etc/profile.d/tmpdir.sh
-#!/bin/sh
-
-if [ ! -d $HOME/tmp -a "$HOME" != "/" ]; then
-  rm -rf $HOME/tmp
-  mkdir -p $HOME/tmp
-fi
-
-chown $USER $HOME/tmp
-chmod 2750 $HOME/tmp
-
-export TMPDIR=$HOME/tmp
-export TMP=$TMPDIR
-EOF
-chmod +x /etc/profile.d/tmpdir.sh
----------------------------------------------
 
 Setting this to '*' probably may avoid some headaches:
 

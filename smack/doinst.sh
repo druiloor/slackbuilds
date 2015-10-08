@@ -23,5 +23,8 @@ preserve_perms() {
 }
 
 preserve_perms etc/rc.d/rc.smack.new
-#config etc/configfile.new
+config etc/profile.d/tmpdir.sh.new
+
+attr -S -s SMACK64 -V '*' dev/null
+attr -S -s SMACK64 -V '*' dev/zero
 
