@@ -21,7 +21,7 @@ patch -p0 < /usr/doc/smack-1.1.0/patches/fstab
 patch -p0 < /usr/doc/smack-1.1.0/patches/lilo.conf
 lilo -v
 
-Setting this to '*' probably may avoid some headaches (see doinst.sh):
+Setting this to '*' probably may avoid some headaches:
 
-/tmp, /usr/tmp, and /var/tmp
+attr -S -s SMACK64 -V '*' /tmp /usr/tmp /var/tmp
 
