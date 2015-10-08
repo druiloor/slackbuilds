@@ -21,6 +21,12 @@ patch -p0 < /usr/doc/smack-1.1.0/patches/fstab
 patch -p0 < /usr/doc/smack-1.1.0/patches/lilo.conf
 lilo -v
 
+Add to: /etc/rc.d/rc.local
+
+if [ -x /etc/rc.d/rc.smack ]; then
+  /etc/rc.d/rc.smack start
+fi
+
 Setting this to '*' probably may avoid some headaches:
 
 attr -S -s SMACK64 -V '*' /tmp /usr/tmp /var/tmp
